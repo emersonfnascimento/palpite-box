@@ -16,8 +16,6 @@ export default async (request, response) => {
     const mostrarPromocaoCell = sheet.getCell(2, 0)
     const textoCell = sheet.getCell(2, 1)
 
-    console.log(mostrarPromocaoCell.value)
-
     response.end(JSON.stringify({
       showCoupon: mostrarPromocaoCell.value === 'VERDADEIRO',
       message: textoCell.value
